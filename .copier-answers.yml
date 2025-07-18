@@ -17,7 +17,8 @@ odoo_test_flavor: Both
 odoo_version: 18.0
 org_name: Odoo Community Association (OCA)
 org_slug: OCA
-rebel_module_groups: []
+rebel_module_groups:
+  - password_security
 repo_description: server-auth
 repo_name: server-auth
 repo_slug: server-auth
