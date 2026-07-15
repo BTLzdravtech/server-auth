@@ -19,8 +19,12 @@
             <search>
                 <field name="create_uid" />
                 <field name="create_date" />
-               <group>
-                    <filter string="Date" name="groupby_date" context="{'group_by': 'create_date:day'}"/>
+                <group>
+                    <filter
+                        string="Date"
+                        name="groupby_date"
+                        context="{'group_by': 'create_date:day'}"
+                    />
                 </group>
             </search>
         </field>
