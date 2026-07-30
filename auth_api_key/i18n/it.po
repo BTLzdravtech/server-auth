@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-20 08:46+0000\n"
+"PO-Revision-Date: 2026-07-27 11:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -80,6 +80,11 @@ msgstr "Disabilita la chiave API quando si archivia un utente"
 #: model:ir.model.fields,field_description:auth_api_key.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Nome visualizzato"
+
+#. module: auth_api_key
+#: model_terms:ir.ui.view,arch_db:auth_api_key.auth_api_key_form_view
+msgid "Generate Random Token"
+msgstr "Genera token casuale"
 
 #. module: auth_api_key
 #: model:ir.model,name:auth_api_key.model_ir_http
