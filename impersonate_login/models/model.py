@@ -24,7 +24,9 @@ class BaseModel(models.AbstractModel):
             request
             and request.session.get("impersonate_from_uid")
             and "create_uid" in self._fields
+            # ------------------------ BTL Code Changes - START ------------------------------ #
             and not self._transient
+            # ---------------------------------- END ----------------------------------------- #
         ):
             for vals in result_vals_list:
                 vals["create_uid"] = request.session.get("impersonate_from_uid")
