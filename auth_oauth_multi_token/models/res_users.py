@@ -59,6 +59,12 @@ class ResUsers(models.Model):
         res = super()._auth_oauth_signin(provider, validation, params)
 
         if not user:
+            # super() may have bound oauth_uid to an existing user through a
+            # signup token (invitation or reset link): look the user up again
+            user = self.search(
+                [("oauth_uid", "=", oauth_uid), ("oauth_provider_id", "=", provider)]
+            )
+        if not user:
             raise exceptions.AccessDenied()
         user.ensure_one()
         # user found and unique: create a token
